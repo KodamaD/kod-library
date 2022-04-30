@@ -3,7 +3,7 @@ name: verify
 on: push
 
 jobs:
-  verify:
+  generate_includes:
     runs-on: ubuntu-latest
 
     steps:
@@ -12,7 +12,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v3
 
-    - name: Install dependencies
+    - name: Generate include files
       run: |
         cd _includes
         python3 generate.py
