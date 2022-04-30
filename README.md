@@ -6,3 +6,4 @@ Library for Competitive Programming
 ![Code Size](https://img.shields.io/github/languages/code-size/KodamaD/kod-library)
 ![Total Lines](https://img.shields.io/tokei/lines/github/KodamaD/kod-library)
 ![License](https://img.shields.io/github/license/KodamaD/kod-library)
+[![Actions Status](https://github.com/KodamaD/kod-library/workflows/verify/badge.svg)](https://github.com/KodamaD/kod-library/actions)
