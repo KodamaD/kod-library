@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#pragma region includes
 
 #include "kodlib/util/basic_alias"
 #include "kodlib/util/fixed_point"
@@ -9,12 +8,18 @@
 #include "kodlib/util/print"
 #include "kodlib/util/scan"
 
-#pragma endregion
-
 namespace solution {
 
 using namespace kod;
 using namespace util;
+
+using std::array;
+using std::pair;
+using std::tuple;
+using std::vector;
+
+constexpr i32 inf32 = std::numeric_limits<i32>::max() / 2;
+constexpr i64 inf64 = std::numeric_limits<i64>::max() / 2;
 
 void main() {}
 

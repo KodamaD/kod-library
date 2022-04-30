@@ -12,7 +12,7 @@ def main():
             os.makedirs(str(dirs).replace('../', 'kodlib/'), exist_ok=True)
         for src in pathlib.Path('../').joinpath(dirname).glob('**/*.cpp'):
             with open(str(src).replace('../', 'kodlib/').replace('.cpp', ''), 'w') as include:
-                include.write('#include \"' + str(src.resolve()) + '\"')
+                include.write('#include \"' + str(src).replace('../', '/Users/kodamankod/procon/library/kod-library/') + '\"')
 
 if __name__ == '__main__':
     main()
