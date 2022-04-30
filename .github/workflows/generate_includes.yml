@@ -16,3 +16,16 @@ jobs:
       run: |
         cd _includes
         python3 generate.py
+
+    - name: Commit and push
+      run: |
+        git add -N .
+        if ! git diff --exit-code --quiet
+        then
+          git config user.name "KodamaD"
+          git config user.email "kodkodaman@gmail.com"
+          git add .
+          git commit -m "generate include files"
+          git pull
+          git push -u origin main
+        fi
