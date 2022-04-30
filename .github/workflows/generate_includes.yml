@@ -1,0 +1,18 @@
+name: verify
+
+on: push
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+
+    - name: Install dependencies
+      run: |
+        cd _includes
+        python3 generate.py

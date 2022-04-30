@@ -1,0 +1,18 @@
+import os
+import pathlib
+import shutil
+
+def main():
+    if pathlib.Path('kodlib').exists():
+        shutil.rmtree('kodlib')
+    os.mkdir('kodlib')
+
+    for dirname in ['algo', 'ds', 'graph', 'num', 'random', 'util']:
+        for dirs in pathlib.Path('../').joinpath(dirname).glob('**'):
+            os.makedirs(str(dirs).replace('../', 'kodlib/'), exist_ok=True)
+        for src in pathlib.Path('../').joinpath(dirname).glob('**/*.cpp'):
+            with open(str(src).replace('../', 'kodlib/').replace('.cpp', ''), 'w') as include:
+                include.write('#include \"' + str(src.resolve()) + '\"')
+
+if __name__ == '__main__':
+    main()
