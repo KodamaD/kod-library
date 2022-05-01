@@ -16,9 +16,9 @@ data:
     void println(Args&&... args) {\n    print(std::forward<Args>(args)...);\n    std::cout\
     \ << '\\n';\n}\n\ntemplate <class C>\nvoid print_seq(C&& c, const char* sep =\
     \ \" \", const char* end = \"\\n\") {\n    bool f = false;\n    for (auto&& x\
-    \ : std::move(c)) {\n        if (f) {\n            std::cout << sep;\n       \
-    \ } else {\n            f = true;\n        }\n        std::cout << x;\n    }\n\
-    \    std::cout << end;\n}\n\n}  // namespace util\n}  // namespace kod\n"
+    \ : std::forward<C>(c)) {\n        if (f) {\n            std::cout << sep;\n \
+    \       } else {\n            f = true;\n        }\n        std::cout << x;\n\
+    \    }\n    std::cout << end;\n}\n\n}  // namespace util\n}  // namespace kod\n"
   code: "#pragma once\n\n#include <iostream>\n#include <utility>\n\nnamespace kod\
     \ {\nnamespace util {\n\ntemplate <class T>\nvoid print(T&& x) {\n    std::cout\
     \ << x;\n}\n\ntemplate <class T, class... Args>\nvoid print(T&& x, Args&&... args)\
@@ -27,14 +27,14 @@ data:
     \ println(Args&&... args) {\n    print(std::forward<Args>(args)...);\n    std::cout\
     \ << '\\n';\n}\n\ntemplate <class C>\nvoid print_seq(C&& c, const char* sep =\
     \ \" \", const char* end = \"\\n\") {\n    bool f = false;\n    for (auto&& x\
-    \ : std::move(c)) {\n        if (f) {\n            std::cout << sep;\n       \
-    \ } else {\n            f = true;\n        }\n        std::cout << x;\n    }\n\
-    \    std::cout << end;\n}\n\n}  // namespace util\n}  // namespace kod"
+    \ : std::forward<C>(c)) {\n        if (f) {\n            std::cout << sep;\n \
+    \       } else {\n            f = true;\n        }\n        std::cout << x;\n\
+    \    }\n    std::cout << end;\n}\n\n}  // namespace util\n}  // namespace kod"
   dependsOn: []
   isVerificationFile: false
   path: util/print.cpp
   requiredBy: []
-  timestamp: '2022-04-30 20:42:07+09:00'
+  timestamp: '2022-05-01 10:15:35+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: util/print.cpp

@@ -1,11 +1,19 @@
 ---
 data:
   libraryCategories:
+  - name: algo
+    pages:
+    - icon: ':warning:'
+      path: algo/binary_search.cpp
+      title: algo/binary_search.cpp
   - name: util
     pages:
     - icon: ':warning:'
       path: util/basic_alias.cpp
       title: util/basic_alias.cpp
+    - icon: ':warning:'
+      path: util/bit.cpp
+      title: util/bit.cpp
     - icon: ':warning:'
       path: util/fixed_point.cpp
       title: util/fixed_point.cpp
