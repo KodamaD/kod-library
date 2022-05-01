@@ -36,3 +36,7 @@ using revrep = BackwardRange;
 
 }  // namespace util
 }  // namespace kod
+
+/**
+ * @brief 昇順・降順走査
+ */

@@ -82,3 +82,7 @@ constexpr std::enable_if_t<std::is_integral_v<T>, int> ceil_log2(const T& x) {
 
 }  // namespace util
 }  // namespace kod
+
+/**
+ * @brief ビット操作ユーティリティ
+ */

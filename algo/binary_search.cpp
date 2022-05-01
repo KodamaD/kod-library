@@ -25,3 +25,7 @@ T binary_search(T ok, T ng, const F& f) {
 
 }  // namespace algo
 }  // namespace kod
+
+/**
+ * @brief 二分探索
+ */

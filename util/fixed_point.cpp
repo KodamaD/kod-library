@@ -21,3 +21,7 @@ constexpr FixedPoint<F> fixed(F&& f) {
 
 }  // namespace util
 }  // namespace kod
+
+/**
+ * @brief 不動点コンビネータ
+ */

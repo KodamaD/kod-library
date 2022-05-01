@@ -22,3 +22,7 @@ using f80 = long double;
 
 }  // namespace util
 }  // namespace kod
+
+/**
+ * @brief 数値型エイリアス
+ */

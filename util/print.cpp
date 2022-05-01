@@ -43,3 +43,7 @@ void print_seq(C&& c, const char* sep = " ", const char* end = "\n") {
 
 }  // namespace util
 }  // namespace kod
+
+/**
+ * @brief 標準出力ユーティリティ
+ */

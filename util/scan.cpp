@@ -44,3 +44,7 @@ std::vector<char> scan_chars() {
 
 }  // namespace util
 }  // namespace kod
+
+/**
+ * @brief 標準入力ユーティリティ
+ */
