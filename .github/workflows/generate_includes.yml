@@ -1,4 +1,4 @@
-name: verify
+name: generate_includes
 
 on: push
 

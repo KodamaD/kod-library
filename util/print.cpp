@@ -30,7 +30,7 @@ void println(Args&&... args) {
 template <class C>
 void print_seq(C&& c, const char* sep = " ", const char* end = "\n") {
     bool f = false;
-    for (auto&& x : std::move(c)) {
+    for (auto&& x : std::forward<C>(c)) {
         if (f) {
             std::cout << sep;
         } else {
