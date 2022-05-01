@@ -7,6 +7,7 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
+    document_title: "\u6A19\u6E96\u51FA\u529B\u30E6\u30FC\u30C6\u30A3\u30EA\u30C6\u30A3"
     links: []
   bundledCode: "#line 2 \"util/print.cpp\"\n\n#include <iostream>\n#include <utility>\n\
     \nnamespace kod {\nnamespace util {\n\ntemplate <class T>\nvoid print(T&& x) {\n\
@@ -18,7 +19,9 @@ data:
     \ \" \", const char* end = \"\\n\") {\n    bool f = false;\n    for (auto&& x\
     \ : std::forward<C>(c)) {\n        if (f) {\n            std::cout << sep;\n \
     \       } else {\n            f = true;\n        }\n        std::cout << x;\n\
-    \    }\n    std::cout << end;\n}\n\n}  // namespace util\n}  // namespace kod\n"
+    \    }\n    std::cout << end;\n}\n\n}  // namespace util\n}  // namespace kod\n\
+    \n/**\n * @brief \u6A19\u6E96\u51FA\u529B\u30E6\u30FC\u30C6\u30A3\u30EA\u30C6\u30A3\
+    \n */\n"
   code: "#pragma once\n\n#include <iostream>\n#include <utility>\n\nnamespace kod\
     \ {\nnamespace util {\n\ntemplate <class T>\nvoid print(T&& x) {\n    std::cout\
     \ << x;\n}\n\ntemplate <class T, class... Args>\nvoid print(T&& x, Args&&... args)\
@@ -29,12 +32,14 @@ data:
     \ \" \", const char* end = \"\\n\") {\n    bool f = false;\n    for (auto&& x\
     \ : std::forward<C>(c)) {\n        if (f) {\n            std::cout << sep;\n \
     \       } else {\n            f = true;\n        }\n        std::cout << x;\n\
-    \    }\n    std::cout << end;\n}\n\n}  // namespace util\n}  // namespace kod"
+    \    }\n    std::cout << end;\n}\n\n}  // namespace util\n}  // namespace kod\n\
+    \n/**\n * @brief \u6A19\u6E96\u51FA\u529B\u30E6\u30FC\u30C6\u30A3\u30EA\u30C6\u30A3\
+    \n */"
   dependsOn: []
   isVerificationFile: false
   path: util/print.cpp
   requiredBy: []
-  timestamp: '2022-05-01 10:15:35+09:00'
+  timestamp: '2022-05-01 16:24:28+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: util/print.cpp
@@ -42,5 +47,5 @@ layout: document
 redirect_from:
 - /library/util/print.cpp
 - /library/util/print.cpp.html
-title: util/print.cpp
+title: "\u6A19\u6E96\u51FA\u529B\u30E6\u30FC\u30C6\u30A3\u30EA\u30C6\u30A3"
 ---

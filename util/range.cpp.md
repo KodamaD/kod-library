@@ -7,6 +7,7 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
+    document_title: "\u6607\u9806\u30FB\u964D\u9806\u8D70\u67FB"
     links: []
   bundledCode: "#line 2 \"util/range.cpp\"\n\n#include <variant>\n\nnamespace kod\
     \ {\nnamespace util {\n\nclass ForwardRange {\n    int src, dst;\n\n  public:\n\
@@ -23,7 +24,8 @@ data:
     \ operator!=(std::monostate) const { return src > dst; }\n    constexpr void operator++()\
     \ const {}\n    constexpr int operator*() { return --src; }\n};\n\nusing rep =\
     \ ForwardRange;\nusing revrep = BackwardRange;\n\n}  // namespace util\n}  //\
-    \ namespace kod\n"
+    \ namespace kod\n\n/**\n * @brief \u6607\u9806\u30FB\u964D\u9806\u8D70\u67FB\n\
+    \ */\n"
   code: "#pragma once\n\n#include <variant>\n\nnamespace kod {\nnamespace util {\n\
     \nclass ForwardRange {\n    int src, dst;\n\n  public:\n    explicit constexpr\
     \ ForwardRange(const int l, const int r) : src(l), dst(r) {}\n    explicit constexpr\
@@ -38,12 +40,13 @@ data:
     \ return {}; }\n    constexpr bool operator!=(std::monostate) const { return src\
     \ > dst; }\n    constexpr void operator++() const {}\n    constexpr int operator*()\
     \ { return --src; }\n};\n\nusing rep = ForwardRange;\nusing revrep = BackwardRange;\n\
-    \n}  // namespace util\n}  // namespace kod"
+    \n}  // namespace util\n}  // namespace kod\n\n/**\n * @brief \u6607\u9806\u30FB\
+    \u964D\u9806\u8D70\u67FB\n */"
   dependsOn: []
   isVerificationFile: false
   path: util/range.cpp
   requiredBy: []
-  timestamp: '2022-05-01 10:15:35+09:00'
+  timestamp: '2022-05-01 16:24:28+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: util/range.cpp
@@ -51,5 +54,5 @@ layout: document
 redirect_from:
 - /library/util/range.cpp
 - /library/util/range.cpp.html
-title: util/range.cpp
+title: "\u6607\u9806\u30FB\u964D\u9806\u8D70\u67FB"
 ---

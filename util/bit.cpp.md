@@ -7,6 +7,8 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':warning:'
   attributes:
+    document_title: "\u30D3\u30C3\u30C8\u64CD\u4F5C\u30E6\u30FC\u30C6\u30A3\u30EA\u30C6\
+      \u30A3"
     links: []
   bundledCode: "#line 2 \"util/bit.cpp\"\n#ifdef ONLINE_JUDGE\n#pragma GCC target(\"\
     popcnt\")\n#endif\n\n#include <limits>\n#include <type_traits>\n\nnamespace kod\
@@ -43,7 +45,8 @@ data:
     \ std::numeric_limits<std::make_unsigned_t<T>>::digits - countl_zero(x);\n}\n\n\
     template <class T>\nconstexpr std::enable_if_t<std::is_integral_v<T>, int> ceil_log2(const\
     \ T& x) {\n    return x == 0 ? 0 : bit_width(x - 1);\n}\n\n}  // namespace util\n\
-    }  // namespace kod\n"
+    }  // namespace kod\n\n/**\n * @brief \u30D3\u30C3\u30C8\u64CD\u4F5C\u30E6\u30FC\
+    \u30C6\u30A3\u30EA\u30C6\u30A3\n */\n"
   code: "#pragma once\n#ifdef ONLINE_JUDGE\n#pragma GCC target(\"popcnt\")\n#endif\n\
     \n#include <limits>\n#include <type_traits>\n\nnamespace kod {\nnamespace util\
     \ {\n\ntemplate <class T>\nconstexpr std::enable_if_t<std::is_integral_v<T>, int>\
@@ -79,12 +82,13 @@ data:
     \ std::numeric_limits<std::make_unsigned_t<T>>::digits - countl_zero(x);\n}\n\n\
     template <class T>\nconstexpr std::enable_if_t<std::is_integral_v<T>, int> ceil_log2(const\
     \ T& x) {\n    return x == 0 ? 0 : bit_width(x - 1);\n}\n\n}  // namespace util\n\
-    }  // namespace kod"
+    }  // namespace kod\n\n/**\n * @brief \u30D3\u30C3\u30C8\u64CD\u4F5C\u30E6\u30FC\
+    \u30C6\u30A3\u30EA\u30C6\u30A3\n */"
   dependsOn: []
   isVerificationFile: false
   path: util/bit.cpp
   requiredBy: []
-  timestamp: '2022-05-01 10:15:35+09:00'
+  timestamp: '2022-05-01 16:24:28+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: util/bit.cpp
@@ -92,5 +96,5 @@ layout: document
 redirect_from:
 - /library/util/bit.cpp
 - /library/util/bit.cpp.html
-title: util/bit.cpp
+title: "\u30D3\u30C3\u30C8\u64CD\u4F5C\u30E6\u30FC\u30C6\u30A3\u30EA\u30C6\u30A3"
 ---
