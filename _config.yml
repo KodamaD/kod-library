@@ -6,4 +6,3 @@ plugins:
 - jemoji
 - jekyll-redirect-from
 theme: jekyll-theme-minimal
-title: C++ Library for Competitive Programming
