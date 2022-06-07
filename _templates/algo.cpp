@@ -1,42 +1,31 @@
-// #define NDEBUG
 #include <bits/stdc++.h>
 
-#include "kodlib/util/basic_alias"
-#include "kodlib/util/fixed_point"
-#include "kodlib/util/range"
-#include "kodlib/util/select"
+#include "proconlib/int_alias"
+#include "proconlib/rep"
+#include "proconlib/revrep"
+#include "proconlib/rec_lambda"
+#include "proconlib/setmin"
+#include "proconlib/setmax"
+#include "proconlib/scan"
+#include "proconlib/print"
 
-#include "kodlib/util/print"
-#include "kodlib/util/scan"
-
-namespace ext {}
-
-namespace solution {
-
-using namespace kod;
-using namespace util;
-
+using std::vector;
 using std::array;
 using std::pair;
 using std::tuple;
-using std::vector;
 
-constexpr i32 inf32 = std::numeric_limits<i32>::max() / 2;
-constexpr i64 inf64 = std::numeric_limits<i64>::max() / 2;
+template <class T>
+constexpr T infty = std::numeric_limits<T>::max() / 2;
 
-void main() {
-
+void main_() {   
+    
 }
-
-}  // namespace solution
 
 int main() {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
-    std::cout << std::fixed << std::setprecision(20);
     int cases = 1;
     // std::cin >> cases;
-    while (cases--)
-        solution::main();
+    while (cases--) main_();
     return 0;
 }

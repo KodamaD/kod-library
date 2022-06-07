@@ -1,6 +1,7 @@
 #pragma once
 
 #include <algorithm>
+#include <cassert>
 #include <iterator>
 #include <numeric>
 #include <vector>
@@ -27,6 +28,7 @@ int upb(const std::vector<T>& v, const T& x) {
 
 template <class F>
 std::vector<int> order_by(const int n, const F& f) {
+    assert(n >= 0);
     std::vector v(n);
     std::iota(std::begin(v), std::end(v), 0);
     std::sort(std::begin(v), std::end(v), f);
@@ -40,7 +42,3 @@ std::vector<int> order_by_key(const std::vector<T>& v, const Comp& comp = Comp()
 
 }  // namespace util
 }  // namespace kod
-
-/**
- * @brief std::vector ユーティリティ
- */

@@ -23,7 +23,3 @@ constexpr bool setmax(T& x, const T& y) {
 
 }  // namespace util
 }  // namespace kod
-
-/**
- * @brief 比較代入
- */

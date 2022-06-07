@@ -7,43 +7,48 @@ namespace kod {
 namespace util {
 
 template <class T>
-void print(T&& x) {
-    std::cout << x;
-}
+void print(std::ostream&) {}
 
 template <class T, class... Args>
-void print(T&& x, Args&&... args) {
-    std::cout << x << ' ';
-    print(std::forward<Args>(args)...);
+void print(std::ostream& os, T&& x, Args&&... args) {
+    os << x << ' ';
+    print(os, std::forward<Args>(args)...);
 }
 
-void println() {
-    std::cout << '\n';
+template <class... Args>
+void print(Args&&... args) {
+    print(std::cout, std::forward<Args>(args)...);
+}
+
+template <class... Args>
+void println(std::ostream& os, Args&&... args) {
+    print(os, std::forward<Args>(args)...);
+    os << '\n';
 }
 
 template <class... Args>
 void println(Args&&... args) {
-    print(std::forward<Args>(args)...);
-    std::cout << '\n';
+    println(std::cout, std::forward<Args>(args)...);
+}
+
+template <class C>
+void print_seq(std::ostream& os, C&& c, const char* sep = " ", const char* end = "\n") {
+    bool f = false;
+    for (auto&& x : c) {
+        if (f) {
+            os << sep;
+        } else {
+            f = true;
+        }
+        os << x;
+    }
+    os << end;
 }
 
 template <class C>
 void print_seq(C&& c, const char* sep = " ", const char* end = "\n") {
-    bool f = false;
-    for (auto&& x : std::forward<C>(c)) {
-        if (f) {
-            std::cout << sep;
-        } else {
-            f = true;
-        }
-        std::cout << x;
-    }
-    std::cout << end;
+    print_seq(std::cout, c, sep, end);
 }
 
 }  // namespace util
 }  // namespace kod
-
-/**
- * @brief 標準出力ユーティリティ
- */
