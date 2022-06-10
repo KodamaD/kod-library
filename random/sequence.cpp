@@ -2,7 +2,10 @@
 
 #include "xorshiro.cpp"
 
+#include <algorithm>
+#include <iterator>
 #include <random>
+#include <vector>
 
 namespace kod {
 namespace random {
