@@ -1,7 +1,16 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: random/number.cpp
+    title: "\u6570\u5024\u751F\u6210"
+  - icon: ':warning:'
+    path: random/sequence.cpp
+    title: "\u6570\u5217\u751F\u6210"
+  - icon: ':warning:'
+    path: random/xorshiro.cpp
+    title: "Xorshiro \u4E71\u6570\u751F\u6210\u5668"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
@@ -35,7 +44,10 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: util/bit.cpp
-  requiredBy: []
+  requiredBy:
+  - random/number.cpp
+  - random/sequence.cpp
+  - random/xorshiro.cpp
   timestamp: '2022-06-07 21:43:34+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

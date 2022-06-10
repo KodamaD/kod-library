@@ -9,6 +9,17 @@ data:
     - icon: ':warning:'
       path: algo/binary_search.cpp
       title: "\u4E8C\u5206\u63A2\u7D22"
+  - name: random
+    pages:
+    - icon: ':warning:'
+      path: random/number.cpp
+      title: "\u6570\u5024\u751F\u6210"
+    - icon: ':warning:'
+      path: random/sequence.cpp
+      title: "\u6570\u5217\u751F\u6210"
+    - icon: ':warning:'
+      path: random/xorshiro.cpp
+      title: "Xorshiro \u4E71\u6570\u751F\u6210\u5668"
   - name: util
     pages:
     - icon: ':warning:'
@@ -44,11 +55,11 @@ layout: toppage
 ![Total Lines](https://img.shields.io/tokei/lines/github/KodamaD/kod-library)
 ![License](https://img.shields.io/github/license/KodamaD/kod-library)
 
-競技プログラミング用の C++ ライブラリです。以下の環境での動作確認を行っています。
+競技プログラミング用の C++ ライブラリです。以下の環境で動作確認を行っています。
 
 - C++17
 - GCC の組み込み関数が使用可能
-- 128bit 整数型（`__int128_t`、`__uint128_t`）が使用可能
+- 128bit 整数型 (`__int128_t`, `__uint128_t`) が使用可能
 - 2 の補数表現が規定されている
 
 競技プログラミングにおける使いやすさを最優先しているため、過度に抽象的なコードは避ける場合があります。また、コード長を短くする努力は行いません。

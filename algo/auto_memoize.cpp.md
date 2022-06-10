@@ -22,7 +22,7 @@ data:
     \ {\n        return func(*this, std::get<I>(args_tuple)...);\n    }\n\n  public:\n\
     \    explicit auto_memoize(const F& func) : func(func), memo() {}\n\n    template\
     \ <class... Args>\n    R operator()(Args&&... args) {\n        ArgsTuple args_tuple(std::forward<Args>(args)...);\n\
-    \        const auto itr = memo.find(args_tuple);\n        if (itr != memo.end())\n\
+    \        const auto itr = memo.find(args_tuple);\n        if (itr != std::end(memo))\n\
     \            return itr->second;\n        const R res =\n            apply(args_tuple,\
     \ std::make_index_sequence<std::tuple_size<ArgsTuple>::value>());\n        memo.emplace(std::piecewise_construct,\
     \ std::move(args_tuple), res);\n        return res;\n    }\n};\n\n}  // namespace\
@@ -41,7 +41,7 @@ data:
     \    }\n\n  public:\n    explicit auto_memoize(const F& func) : func(func), memo()\
     \ {}\n\n    template <class... Args>\n    R operator()(Args&&... args) {\n   \
     \     ArgsTuple args_tuple(std::forward<Args>(args)...);\n        const auto itr\
-    \ = memo.find(args_tuple);\n        if (itr != memo.end())\n            return\
+    \ = memo.find(args_tuple);\n        if (itr != std::end(memo))\n            return\
     \ itr->second;\n        const R res =\n            apply(args_tuple, std::make_index_sequence<std::tuple_size<ArgsTuple>::value>());\n\
     \        memo.emplace(std::piecewise_construct, std::move(args_tuple), res);\n\
     \        return res;\n    }\n};\n\n}  // namespace algo\n}  // namespace kod\n\
@@ -50,7 +50,7 @@ data:
   isVerificationFile: false
   path: algo/auto_memoize.cpp
   requiredBy: []
-  timestamp: '2022-06-07 21:43:34+09:00'
+  timestamp: '2022-06-10 10:20:32+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: algo/auto_memoize.cpp
