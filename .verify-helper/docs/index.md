@@ -4,11 +4,11 @@
 ![Total Lines](https://img.shields.io/tokei/lines/github/KodamaD/kod-library)
 ![License](https://img.shields.io/github/license/KodamaD/kod-library)
 
-競技プログラミング用の C++ ライブラリです。以下の環境での動作確認を行っています。
+競技プログラミング用の C++ ライブラリです。以下の環境で動作確認を行っています。
 
 - C++17
 - GCC の組み込み関数が使用可能
-- 128bit 整数型（`__int128_t`、`__uint128_t`）が使用可能
+- 128bit 整数型 (`__int128_t`, `__uint128_t`) が使用可能
 - 2 の補数表現が規定されている
 
 競技プログラミングにおける使いやすさを最優先しているため、過度に抽象的なコードは避ける場合があります。また、コード長を短くする努力は行いません。

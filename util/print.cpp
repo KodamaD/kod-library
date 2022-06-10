@@ -6,12 +6,13 @@
 namespace kod {
 namespace util {
 
-template <class T>
 void print(std::ostream&) {}
 
 template <class T, class... Args>
 void print(std::ostream& os, T&& x, Args&&... args) {
-    os << x << ' ';
+    os << x;
+    if (sizeof...(args) != 0)
+        os << ' ';
     print(os, std::forward<Args>(args)...);
 }
 

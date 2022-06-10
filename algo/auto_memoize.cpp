@@ -39,7 +39,7 @@ class auto_memoize {
     R operator()(Args&&... args) {
         ArgsTuple args_tuple(std::forward<Args>(args)...);
         const auto itr = memo.find(args_tuple);
-        if (itr != memo.end())
+        if (itr != std::end(memo))
             return itr->second;
         const R res =
             apply(args_tuple, std::make_index_sequence<std::tuple_size<ArgsTuple>::value>());

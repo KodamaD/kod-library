@@ -7,7 +7,7 @@ def main():
         shutil.rmtree('kodlib')
     os.mkdir('kodlib')
 
-    for dirname in ['algo', 'container', 'graph', 'math', 'random', 'traits', 'util']:
+    for dirname in ['algo', 'ds', 'graph', 'num', 'random', 'traits', 'util']:
         for dirs in pathlib.Path('../').joinpath(dirname).glob('**'):
             os.makedirs(str(dirs).replace('../', 'kodlib/'), exist_ok=True)
         for src in pathlib.Path('../').joinpath(dirname).glob('**/*.cpp'):
